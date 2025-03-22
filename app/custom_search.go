@@ -179,7 +179,7 @@ func (m *ModelCustomSearch) CustomSearch(c *gin.Context) (bool, error) {
 
 func buildDynamicSelectQuery(table string, fields []string) string {
 	if len(fields) == 0 {
-		return fmt.Sprintf("SELECT * FROM %s", table)
+		return fmt.Sprintf("SELECT * FROM %s WHERE 1=1", table)
 	}
 
 	fieldList := fmt.Sprintf("%s", fields[0])

@@ -59,7 +59,7 @@ func (c *globalClient) SelectOne(table, field, val string) (pgx.Rows, error) {
 	return rows, nil
 }
 
-func (c *globalClient) Search(table, cmd string, args []interface{}) (pgx.Rows, error) {
+func (c *globalClient) Search(table, cmd string, args []any) (pgx.Rows, error) {
 	fmt.Println(cmd, args)
 	rows, err := c.Query(context.Background(), cmd, args...)
 	if err != nil {
