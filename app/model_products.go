@@ -28,8 +28,8 @@ type Product struct {
 	// @Description Date when the product was added
 	// @example "2025-03-22" "YYYY-MM-DD"
 	// @format date
-	AddedDate  time.Time `json:"added_date"`
-	Status     string    `json:"status"`
+	AddedDate time.Time `json:"added_date"`
+	Status    string    `json:"status"`
 	// @format uuid
 	CategoryID uuid.UUID `json:"category_id"`
 	Price      float64   `json:"price"`
